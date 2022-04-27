@@ -1,0 +1,29 @@
+swagger: "2.0"
+info:
+  title: Product Service
+  description: HTTP Product Service
+  version: ""
+host: localhost:8088
+consumes:
+- application/json
+- application/xml
+- application/gob
+produces:
+- application/json
+- application/xml
+- application/gob
+paths:
+  /products:
+    get:
+      tags:
+      - products
+      summary: get_all_products products
+      operationId: products#get_all_products
+      responses:
+        "200":
+          description: OK response.
+          schema:
+            type: integer
+            format: int64
+      schemes:
+      - http
